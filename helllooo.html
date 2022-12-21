@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>var toDoList = document.createElement('div');
+        toDoList.innerHTML = '<h1>To Do List</h1>';
+        document.body.appendChild(toDoList);
+        var toDoListForm = document.createElement('form');
+        toDoListForm.innerHTML = '<input type="text" id="toDoListInput" placeholder="Add a task...">';
+        toDoList.appendChild(toDoListForm);
+        var toDoListInput = document.getElementById('toDoListInput');
+        var toDoListButton = document.createElement('button');
+        toDoListButton.innerHTML = 'Add Task';
+        toDoListForm.appendChild(toDoListButton);
+        var toDoListUl = document.createElement('ul');
+        toDoList.appendChild(toDoListUl);
+        var toDoListLi = document.createElement('li');
+        toDoListLi.innerHTML = '<input type="checkbox" id="toDoListCheckbox">';
+        toDoListUl.appendChild(toDoListLi);
+        var toDoListCheckbox = document.getElementById('toDoListCheckbox');
+        var toDoListSpan = document.createElement('span');
+        toDoListSpan.innerHTML = '<input type="text" id="toDoListSpanInput" placeholder="Add a task...">';
+        toDoListLi.appendChild(toDoListSpan);
+        var toDoListSpanInput = document.getElementById('toDoListSpanInput');
+        var toDoListDeleteButton = document.createElement('button');
+        toDoListDeleteButton.innerHTML = 'Delete';
+        toDoListLi.appendChild(toDoListDeleteButton);
+        var toDoListEditButton = document.createElement('button');
+        toDoListEditButton.innerHTML = 'Edit';
+        toDoListLi.appendChild(toDoListEditButton);
+        var toDoListCompleteButton = document.createElement('button');
+        toDoListCompleteButton.innerHTML = 'Complete';
+        toDoListLi.appendChild(toDoListCompleteButton);
+        var toDoListClearButton = document.createElement('button');
+        toDoListClearButton.innerHTML = 'Clear All';
+        toDoList.appendChild(toDoListClearButton);
+        var toDoListSaveButton = document.createElement('button');
+        toDoListSaveButton.innerHTML = 'Save';
+        toDoList.appendChild(toDoListSaveButton);
+        var toDoListLoadButton = document.createElement('button');
+        toDoListLoadButton.innerHTML = 'Load';
+        toDoList.appendChild(toDoListLoadButton);
+        var toDoListArray = [];
+        toDoListButton.addEventListener('click', function(event) {
+          event.preventDefault();
+          var toDoListLi = document.createElement('li');
+          toDoListLi.innerHTML = '<input type="checkbox" id="toDoListCheckbox">';
+          toDoListUl.appendChild(toDoListLi);
+          var toDoListCheckbox = document.getElementById('toDoListCheckbox');
+          var toDoListSpan = document.createElement('span');
+          toDoListSpan.innerHTML = '<input type="text" id="toDoListSpanInput" placeholder="Add a task...">';
+          toDoListLi.appendChild(toDoListSpan);
+          var toDoListSpanInput = document.getElementById('toDoListSpanInput');
+          var toDoListDeleteButton = document.createElement('button');
+          toDoListDeleteButton.innerHTML = 'Delete';
+          toDoListLi.appendChild(toDoListDeleteButton);
+          var toDoListEditButton = document.createElement('button');
+          toDoListEditButton.innerHTML = 'Edit';
+          toDoListLi.appendChild(toDoListEditButton);
+          var toDoListCompleteButton = document.createElement('button');
+          toDoListCompleteButton.innerHTML = 'Complete';
+          toDoListLi.appendChild(toDoListCompleteButton);
+          toDoListArray.push(toDoListInput.value);
+          toDoListSpanInput.value = toDoListInput.value;
+          toDoList
+        })</script>
+
+</head>
+<body>
+    
+</body>
+</html>
